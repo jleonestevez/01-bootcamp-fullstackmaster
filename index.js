@@ -3,8 +3,7 @@ const bodyParser = require('body-parser');
 const app = express()
 const { MongoClient } = require("mongodb");
 const port = 3000
-const uri =
-    "mongodb://appuser:supersecret@127.0.0.1:27017/test?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false";
+const uri ="mongodb://appuser:supersecret@127.0.0.1:27017/test?authSource=admin";
 
 const client = new MongoClient(uri);
 app.use(bodyParser.urlencoded({ extended: false }));
