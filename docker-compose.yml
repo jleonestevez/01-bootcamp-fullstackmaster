@@ -1,0 +1,24 @@
+version: '2'
+services:
+  mongo:
+    build: .
+    image: dockerthreepoint
+    environment:
+      # provide your credentials here
+      - MONGO_DATABASE=threepoint
+    ports:
+      - "27017:27017"
+    volumes:
+      - /Users/josefelixestevezhernandez/mongodisk:/data/db
+      # if you wish to setup additional user accounts specific per DB or with different roles you can use following entry point
+      - "$PWD/mongo-entrypoint/:/docker-entrypoint-initdb.d/"
+    # no --auth is needed here as presence of username and password add this option automatically
+    entrypoint: /loadData.sh
+    command: mongod
+  api:
+    image: api
+    environment:
+      # provide your credentials here
+      - MONGODB_CONNSTRING="mongodb://appuser:supersecret@mongo:27017/test?authSource=admin"
+    ports:
+      - "3000:3000"
