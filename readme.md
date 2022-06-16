@@ -21,14 +21,14 @@
   <p align="center">
     Dockerizacion de una api restfull con nodejs, express, mongoDB
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/jleonestevez/01-bootcamp-fullstackmaster"><strong>Explora el detalle »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://github.com/jleonestevez/01-bootcamp-fullstackmaster">Ver Demo</a>
     ·
-    <a href="https://github.com/jleonestevez/01-bootcamp-fullstackmaster/issues">Report Bug</a>
+    <a href="https://github.com/jleonestevez/01-bootcamp-fullstackmaster/issues">Reportar Bug</a>
     ·
-    <a href="https://github.com/jleonestevez/01-bootcamp-fullstackmaster/issues">Request Feature</a>
+    <a href="https://github.com/jleonestevez/01-bootcamp-fullstackmaster/issues">Enviar Nuevas funcionalidades</a>
   </p>
 </div>
 
@@ -39,71 +39,86 @@
   <summary>Tabla de Contenidos</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Acerca del Proyecto</a>
+      <a href="#acerca-del-proyecto">Acerca del Proyecto</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">Tecnologias</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#getting-started">Empezando</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#installation">Instalación</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#usage">Uso</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
 
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+<!-- ABOUT THE PROJECTa -->
+## Acerca del Proyecto
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[//]: # ([![Product Name Screen Shot][product-screenshot]]&#40;https://example.com&#41;)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+La prueba consta de varios apartados donde se pide al alumno que desarrolle desde cero un proyecto sencillo de Nodejs para, continuación, dockerizar la solución.
+Todo esto siguiendo un sencillo control de versiones del proyecto haciendo uso de Git y GitHub.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+Ejercicios a realizar
+1. Instalar un IDE en vuestra máquina. De acuerdo con las preferencias del profesorado del Máster, recomienda Visual Studio Code, pero se permite flexibilidad en la elección. (0.5 puntos)
+2. Crearse un perfil de GitHub. (0.5 puntos)
+3. Crearse un repo personal en GitHub para que aparezca como perfil público.
+   (0.5 puntos)
+4. Desplegar una base de datos de MongoDB en un container de Docker con
+   persistencia. Crear una database y una colección o colecciones para almacenar documentos. (2 puntos)
+   a. Crear algunos documentos en la(s) colección(es) que se ha(n) creado. Pueden tener los mismos campos que los que se vieron en clase o tener la estructura que se desee.
+   b. Se puede rellenar la base de datos con mecanismo de llamada a alguna API o se pueden meter a mano o facilitar mockeados.
+5. Crear una API sencilla con Nodejs (3 puntos) que sea capaz de:
+   a. Conectarse al mongo dockerizado
+   b. Crear una ruta que, mediante un GET, devuelva todos los documentos en
+   una colección
+   threepoints.com
+   Partner académico:
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+c. Definir una ruta que, mediante un GET, devuelva sólo los documentos que cumplen la condición en base a un query sobre uno o varios campos de un documento.
+d. Definir una ruta con método PUT que modifique alguno de los campos de un documento (el cual debe cumplir alguna condición o query). Los códigos 4xx se dejan a su elección. Los códigos 2xx deben ser, como mínimo, los siguientes:
+i. If not found, create a new document in the database. (return 201 Created)
+ii. If found, target keyword(s) to be successfully modified (200 OK)
+e. Definir una ruta con método DELETE que elimine el(los) documento(s) que cumplan alguna condición o query. Los códigos 4xx se dejan a su
+elección. Los códigos 2xx deben ser, como mínimo, los siguientes: i. If not found, do nothing. (204 No Content)
+ii. If found, document deleted (200 OK)
+6. Dockerizar la API del punto 5. (1 punto)
+7. Subir a un repo público de GitHub el repositorio creado para realizar el punto 5 y 6. El repositorio debe ir acompañado de un README.md que contenga una descripción e instrucciones para poder usar el código en otra máquina. (2.5 puntos)
+   a. Se pide que el alumno intente trabajar haciendo uso de, al menos, una rama.
+   b. De esta manera, se pide que se realice al menos una Pull Request mínimamente documentada y un mergeo a main antes de entregar la actividad. Por ello, también se pide no borrar la rama tras el mergeo.
 
-Use the `BLANK_README.md` to get started.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-### Built With
+<p align="right">(<a href="#top">regresar to top</a>)</p>
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+### Tecnologias
+
+* [Docker](https://www.docker.com/)
+* [NodeJs](https://nodejs.org/es/)
+* [Express](https://expressjs.com/es/)
+* [MongoDB](https://www.mongodb.com/es)
+
+
+<p align="right">(<a href="#top">regresar to top</a>)</p>
 
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Empezando
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+
 
 ### Prerequisites
 
@@ -131,7 +146,7 @@ _Below is an example of how you can instruct your audience on installing and set
    const API_KEY = 'ENTER YOUR API';
    ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">regresar to top</a>)</p>
 
 
 
@@ -142,42 +157,24 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">regresar to top</a>)</p>
 
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/jleonestevez/01-bootcamp-fullstackmaster/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+- [x] Crear DockerFile Api
+- [x] Crear DockerFile Mongo con Datos persistentes
+- [x] Crear Docker Compose
+- [X] Crear Api
+- [ ] Agregar Metodos Get, Post, Put, Delete
 
 
+Ve [Bugs Reportados](https://github.com/jleonestevez/01-bootcamp-fullstackmaster/issues) para obtener una lista completa de las características propuestas (y los problemas conocidos)..
 
-<!-- CONTRIBUTING -->
-## Contributing
+<p align="right">(<a href="#top">regresar to top</a>)</p>
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
@@ -186,36 +183,22 @@ Don't forget to give the project a star! Thanks again!
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">regresar to top</a>)</p>
 
 
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Jose Estevez  - josefelixe@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Link del Proyecto: [https://github.com/jleonestevez/01-bootcamp-fullstackmaster](https://github.com/jleonestevez/01-bootcamp-fullstackmaster)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">regresar to top</a>)</p>
 
 
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">regresar to top</a>)</p>
 
 
 
@@ -227,10 +210,10 @@ Use this space to list resources you find helpful and would like to give credit 
 [forks-url]: https://github.com/jleonestevez/01-bootcamp-fullstackmaster/network/members
 [stars-shield]: https://img.shields.io/github/stars/jleonestevez/01-bootcamp-fullstackmaster.svg?style=for-the-badge
 [stars-url]: https://github.com/jleonestevez/01-bootcamp-fullstackmaster/stargazers
-[issues-shield]: https://img.shields.io/github/issues/jleonestevez/01-bootcamp-fullstackmaster.svg?style=for-the-badge
-[issues-url]: https://github.com/jleonestevez/01-bootcamp-fullstackmaster/issues
+[issues-shield]: https://img.shields.io/github/issues/jleonestevez/01-bootcamp-fullstackmaster.svg?style=for-the-badge 
+[issues-url]: https://github.com/jleonestevez/01-bootcamp-fullstackmaster/issues 
 [license-shield]: https://img.shields.io/github/license/jleonestevez/01-bootcamp-fullstackmaster.svg?style=for-the-badge
 [license-url]: https://github.com/jleonestevez/01-bootcamp-fullstackmaster/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[linkedin-url]: https://www.linkedin.com/in/jose-estevez-0b9a4729/
 [product-screenshot]: images/screenshot.png
