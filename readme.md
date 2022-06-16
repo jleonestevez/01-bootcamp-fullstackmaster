@@ -45,7 +45,7 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Empezando</a>
+      <a href="#empezando">Empezando</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Instalación</a></li>
@@ -75,26 +75,25 @@ Ejercicios a realizar
    (0.5 puntos)
 4. Desplegar una base de datos de MongoDB en un container de Docker con
    persistencia. Crear una database y una colección o colecciones para almacenar documentos. (2 puntos)
-   a. Crear algunos documentos en la(s) colección(es) que se ha(n) creado. Pueden tener los mismos campos que los que se vieron en clase o tener la estructura que se desee.
-   b. Se puede rellenar la base de datos con mecanismo de llamada a alguna API o se pueden meter a mano o facilitar mockeados.
+   * a. Crear algunos documentos en la(s) colección(es) que se ha(n) creado. Pueden tener los mismos campos que los que se vieron en clase o tener la estructura que se desee.
+   * b. Se puede rellenar la base de datos con mecanismo de llamada a alguna API o se pueden meter a mano o facilitar mockeados.
 5. Crear una API sencilla con Nodejs (3 puntos) que sea capaz de:
-   a. Conectarse al mongo dockerizado
-   b. Crear una ruta que, mediante un GET, devuelva todos los documentos en
+   * a. Conectarse al mongo dockerizado
+   * b. Crear una ruta que, mediante un GET, devuelva todos los documentos en
    una colección
-   threepoints.com
-   Partner académico:
-
-c. Definir una ruta que, mediante un GET, devuelva sólo los documentos que cumplen la condición en base a un query sobre uno o varios campos de un documento.
-d. Definir una ruta con método PUT que modifique alguno de los campos de un documento (el cual debe cumplir alguna condición o query). Los códigos 4xx se dejan a su elección. Los códigos 2xx deben ser, como mínimo, los siguientes:
-i. If not found, create a new document in the database. (return 201 Created)
-ii. If found, target keyword(s) to be successfully modified (200 OK)
-e. Definir una ruta con método DELETE que elimine el(los) documento(s) que cumplan alguna condición o query. Los códigos 4xx se dejan a su
-elección. Los códigos 2xx deben ser, como mínimo, los siguientes: i. If not found, do nothing. (204 No Content)
-ii. If found, document deleted (200 OK)
+   * c. Definir una ruta que, mediante un GET, devuelva sólo los documentos que cumplen la condición en base a un query sobre uno o varios campos de un documento.
+   * d. Definir una ruta con método PUT que modifique alguno de los campos de un documento (el cual debe cumplir alguna condición o query). Los códigos 4xx se dejan a su elección. Los códigos 2xx deben ser, como mínimo, los siguientes:
+     * i. If not found, create a new document in the database. (return 201 Created)
+     * ii. If found, target keyword(s) to be successfully modified (200 OK)
+   * e. Definir una ruta con método DELETE que elimine el(los) documento(s) que cumplan alguna condición o query. Los códigos 4xx se dejan a su
+   elección. Los códigos 2xx deben ser, como mínimo, los siguientes: 
+     * i. If not found, do nothing. (204 No Content)
+     * ii. If found, document deleted (200 OK)
 6. Dockerizar la API del punto 5. (1 punto)
-7. Subir a un repo público de GitHub el repositorio creado para realizar el punto 5 y 6. El repositorio debe ir acompañado de un README.md que contenga una descripción e instrucciones para poder usar el código en otra máquina. (2.5 puntos)
-   a. Se pide que el alumno intente trabajar haciendo uso de, al menos, una rama.
-   b. De esta manera, se pide que se realice al menos una Pull Request mínimamente documentada y un mergeo a main antes de entregar la actividad. Por ello, también se pide no borrar la rama tras el mergeo.
+7. Subir a un repo público de GitHub el repositorio creado para realizar el punto 5 y 6. 
+8. El repositorio debe ir acompañado de un README.md que contenga una descripción e instrucciones para poder usar el código en otra máquina. (2.5 puntos)
+   * a. Se pide que el alumno intente trabajar haciendo uso de, al menos, una rama.
+   * b. De esta manera, se pide que se realice al menos una Pull Request mínimamente documentada y un mergeo a main antes de entregar la actividad. Por ello, también se pide no borrar la rama tras el mergeo.
 
 
 
@@ -122,28 +121,26 @@ ii. If found, document deleted (200 OK)
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Antes de empezar, se debe tener instalado lo siguiente:
+
+* [Docker](https://www.docker.com/)
+* [Postman](https://www.postman.com/)
+
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+Dado a que todo esta dockerizado, se deben compilar las imagenes docker y levantarlas de la siguiente forma
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Compilar la imagen segun el DockerFile del proyecto
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   docker build --target api -t api .
    ```
-3. Install NPM packages
+      ```sh
+   docker build --target dockerthreepoint -t dockerthreepoint .
+   ```
+2. Iniciar los contenedores mediante docker-compose
    ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+   docker-compose up     
    ```
 
 <p align="right">(<a href="#top">regresar to top</a>)</p>
@@ -151,7 +148,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Uso
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
