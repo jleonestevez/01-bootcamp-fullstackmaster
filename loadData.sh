@@ -25,7 +25,7 @@ echo "Importing sample datasets into $server"
 
 mongoimport --host $server --db $MONGO_DATABASE --collection movies --drop --file /movies.json
 echo "Creating users..."
-mongo admin --host $server --eval "db.createUser({user: 'appuser', pwd: 'supersecret',roles: [{role: 'readWrite', db: " + $MONGO_DATABASE + "}]}); db.createUser({user: 'administrator', pwd: 'no1willguess', roles: [{role: 'userAdminAnyDatabase', db: 'admin'}]});"
+mongo admin --host $server --eval "db.createUser({user: 'appuser', pwd: 'supersecret',roles: [{role: 'readWrite', db: 'admin'}]})";
 echo "Users created."
 if $is_local; then
     # kill and re-run mongo, so we make sure we substitute the mongod process as the container PID 1, maybe a way around this?

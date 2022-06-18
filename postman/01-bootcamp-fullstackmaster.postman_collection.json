@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "1a2228ee-fe98-4e29-83a7-bfd89cbbfee3",
+		"name": "01-bootcamp-fullstackmaster",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "146784"
+	},
+	"item": [
+		{
+			"name": "Obtener Cinemas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/threepoint/cinemas",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"threepoint",
+						"cinemas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Cinema",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/threepoint/cinema/Blacksmith Scene",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"threepoint",
+						"cinema",
+						"Blacksmith Scene"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guardar cinema",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"plot\" : \"abcd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/threepoint/cinema/573a1390f29313caabcd4130",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"threepoint",
+						"cinema",
+						"573a1390f29313caabcd4130"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar cinema",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/threepoint/cinema/573a1390f29313caabcd4131",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"threepoint",
+						"cinema",
+						"573a1390f29313caabcd4131"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

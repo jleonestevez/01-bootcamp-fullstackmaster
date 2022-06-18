@@ -53,7 +53,6 @@
     </li>
     <li><a href="#usage">Uso</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -131,14 +130,20 @@ Antes de empezar, se debe tener instalado lo siguiente:
 
 Dado a que todo esta dockerizado, se deben compilar las imagenes docker y levantarlas de la siguiente forma
 
-1. Compilar la imagen segun el DockerFile del proyecto
+1. Compilar la imagen(DockerFile) segun el DockerFile del proyecto
    ```sh
    docker build --target api -t api .
    ```
       ```sh
    docker build --target dockerthreepoint -t dockerthreepoint .
    ```
-2. Iniciar los contenedores mediante docker-compose
+2. Editar ruta(path) fisica para persistencia de BD en fichero docker-compose.yml
+   ```sh
+   volumes:
+    - path:/data/db    
+   ```
+
+3. Iniciar los contenedores mediante docker-compose
    ```sh
    docker-compose up     
    ```
@@ -150,9 +155,14 @@ Dado a que todo esta dockerizado, se deben compilar las imagenes docker y levant
 <!-- USAGE EXAMPLES -->
 ## Uso
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Las api expuestas son las siguientes:
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+* [DELETE /threepoint/cinema/:id](/threepoint/cinema/) : Api encargado de eliminar un cinema en base a su ID interno.
+* [GET /threepoint/cinema/:title](/threepoint/cinema/) : Api encargada de obtener un cinema en base a su título.
+* [GET threepoint/cinemas?page=0&limit=10](/threepoint/cinema/) : Api encargada de obtener todos los cinemas con posibilidad de paginar los resultados indicando "page" y "limit"
+* [PUT /threepoint/cinema/:id](/threepoint/cinema/) : Api encargada de actualizar o crear un cinema en base a su ID interno.
+
+En el directorio "postman" se encuentra una collecion con los ejemplos de uso de la API que se pueden importar por medio de la opcion "Import" de postman.
 
 <p align="right">(<a href="#top">regresar to top</a>)</p>
 
@@ -165,20 +175,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] Crear DockerFile Mongo con Datos persistentes
 - [x] Crear Docker Compose
 - [X] Crear Api
-- [ ] Agregar Metodos Get, Post, Put, Delete
+- [X] Agregar Metodos Get, Post, Put, Delete
 
 
 Ve [Bugs Reportados](https://github.com/jleonestevez/01-bootcamp-fullstackmaster/issues) para obtener una lista completa de las características propuestas (y los problemas conocidos)..
-
-<p align="right">(<a href="#top">regresar to top</a>)</p>
-
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">regresar to top</a>)</p>
 
