@@ -157,10 +157,10 @@ Dado a que todo esta dockerizado, se deben compilar las imagenes docker y levant
 
 Las api expuestas son las siguientes:
 
-* [DELETE /threepoint/cinema/:id](/threepoint/cinema/) : Api encargado de eliminar un cinema en base a su ID interno.
-* [GET /threepoint/cinema/:title](/threepoint/cinema/) : Api encargada de obtener un cinema en base a su título.
-* [GET threepoint/cinemas?page=0&limit=10](/threepoint/cinema/) : Api encargada de obtener todos los cinemas con posibilidad de paginar los resultados indicando "page" y "limit"
-* [PUT /threepoint/cinema/:id](/threepoint/cinema/) : Api encargada de actualizar o crear un cinema en base a su ID interno.
+* [DELETE /threepoint/cinema/:id](#) : Api encargado de eliminar un cinema en base a su ID interno.
+* [GET /threepoint/cinema/:title](#) : Api encargada de obtener un cinema en base a su título.
+* [GET /threepoint/cinemas?page=0&limit=10](#) : Api encargada de obtener todos los cinemas con posibilidad de paginar los resultados indicando "page" y "limit"
+* [PUT /threepoint/cinema/:id](#) : Api encargada de actualizar o crear un cinema en base a su ID interno.
 
 En el directorio "postman" se encuentra una collecion con los ejemplos de uso de la API que se pueden importar por medio de la opcion "Import" de postman.
 
