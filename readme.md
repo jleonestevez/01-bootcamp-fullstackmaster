@@ -47,9 +47,9 @@
     <li>
       <a href="#empezando">Empezando</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#prerequisitos">Prerequisitos</a></li>
          <li><a href="#Consideraciones">Consideraciones</a></li>
-        <li><a href="#installation">Instalación</a></li>
+        <li><a href="#installacion">Instalación</a></li>
       </ul>
     </li>
     <li><a href="#usage">Uso</a></li>
@@ -125,14 +125,14 @@ La BD dockerizada contiene las siguientes caracteristicas adicionales:
  * BD precargada de peliculas obtenidas del sitio oficial de mongoDB
  * Usuario administrativo generado automáticamente.
 
-### Prerequisites
+### Prerequisitos
 Antes de empezar, se debe tener instalado lo siguiente:
 
 * [Docker](https://www.docker.com/)
 * [Postman](https://www.postman.com/)
 
 
-### Installation
+### Installacion
 
 Dado a que todo esta dockerizado, se deben compilar las imagenes docker y levantarlas de la siguiente forma
 
