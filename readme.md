@@ -48,6 +48,7 @@
       <a href="#empezando">Empezando</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
+         <li><a href="#Consideraciones">Consideraciones</a></li>
         <li><a href="#installation">Instalación</a></li>
       </ul>
     </li>
@@ -118,8 +119,13 @@ Ejercicios a realizar
 
 
 
-### Prerequisites
+### Consideraciones
 
+La BD dockerizada contiene las siguientes caracteristicas adicionales:
+ * BD precargada de peliculas obtenidas del sitio oficial de mongoDB
+ * Usuario administrativo generado automáticamente.
+
+### Prerequisites
 Antes de empezar, se debe tener instalado lo siguiente:
 
 * [Docker](https://www.docker.com/)
